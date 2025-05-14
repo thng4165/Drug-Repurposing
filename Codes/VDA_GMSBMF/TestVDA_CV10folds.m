@@ -11,7 +11,7 @@ methodset  = {'VDA-GMSBMF'};
     nCV = 5; nfold  = 10; CVtype = 'CVa';    
   
     %% 1. Load Datesets
-    % load Datasets\MatlabDataFiles\HDVD    
+     load Datasets\MatlabDataFiles\HDVD    
     % load Datasets\MatlabDataFiles\LAGCN
     % load Datasets\MatlabDataFiles\Fdataset
     % load Datasets\MatlabDataFiles\Cdataset
@@ -19,9 +19,9 @@ methodset  = {'VDA-GMSBMF'};
     % load Datasets\MatlabDataFiles\Ydataset
    
 
-     Wdv = didr'; %load([datadir,filesep,'matDrugVirus.txt']   ); 
-     Wvv = disease; %load([datadir,filesep,'matVirusVirus.txt']   ); 
-     Wdd = drug; %%load([datadir,filesep,'matDrugDrug.txt']  ); 
+     Wdv = didr'; 
+     Wvv = disease;
+     Wdd = drug; 
 
     % oMat-MechDB dataset 
     % a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
@@ -140,18 +140,7 @@ methodset  = {'VDA-GMSBMF'};
 
     end 
     predicted_score = MatPredict;
-  % writematrix(predicted_score, 'VDA_GMSBMF_HDVDdata.csv');
- % writematrix(predicted_score, 'VDA_GMSBMF_LAGCNdata.csv');
- % writematrix(predicted_score, 'VDA_GMSBMF_Fdata.csv');
- %writematrix(predicted_score, 'VDA_GMSBMF_Cdata.csv');
- %writematrix(predicted_score, 'VDA_GMSBMF_LRSSLdata.csv');
- % writematrix(predicted_score, 'VDA_GMSBMF_Ydata.csv');
-  writematrix(predicted_score, 'VDA_GMSBMF_oMatdata_neworder.csv');
-  % writematrix(predicted_score, 'VDA_GMSBMF_hsdndata_neworder.csv');
- %writematrix(predicted_score, 'VDA_GMSBMF_SCMFDDLdata.csv'); 
- % writematrix(predicted_score, 'VDA_GMSBMF_iDrug.csv'); 
- % writematrix(predicted_score, 'VDA_GMSBMF_DNdata.csv'); 
-
+  
 %%  CV: AUC-AUPR
 %%% sorting by disease
   inputObs_matrix = Wdv; % transpose to sort by column - disease
