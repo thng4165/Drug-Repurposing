@@ -1,1 +1,18 @@
+Three datasets containing multiple similarity measures for drugs and diseases: 
 
+1. Cdataset_ms
+2. Fdataset_ms
+3. Ydataset_ms
+
+## Detail
+
+Wrname: the DrugBank IDs of drugs;
+Wdname: the OMIM IDs of diseases;
+drug_ChemS: chemical structure similarity matrix;
+drug_AtcS: drug's ATC code similarity matrix;
+drug_SideS: side-effect similarity matrix;
+drug_DDIS: drug-drug interaction similarity matrix;
+drug_TargetS: drug's target profile similarity matrix;
+disease_PhS: disease phenotype similarity matrix;
+disease_DoS: disease ontology similarity matrix;
+didr: disease-drug association matrix.
