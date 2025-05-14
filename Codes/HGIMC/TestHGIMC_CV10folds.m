@@ -1,78 +1,53 @@
 clear all;
 rng('default'); seed = 2024; rng(seed)
-addpath("C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC");
+addpath("HGIMC");
 
 addpath('Functions');
 tic;
 %% 1. Load Datesets
- % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset.mat
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\HDVD
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LAGCN
- % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-     % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LRSSL
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
-   % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\DNdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\SCMFDD_L
 
-    %load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\iDrug
+% load Datasets\MatlabDataFiles\HDVD
+% load Datasets\MatlabDataFiles\LAGCN
+% load Datasets\MatlabDataFiles\Fdataset
+% load Datasets\MatlabDataFiles\Cdataset.mat
+% load Datasets\MatlabDataFiles\Cdataset
+% load Datasets\MatlabDataFiles\LRSSL
+% load Datasets\MatlabDataFiles\Ydataset
 
-    %% Checking with HGIMC datasets
-  %load C:\Trang\KIProjects\ComprehensionDR\Datasets\HGIMCdata\Fdataset_ms
-
-  % load C:\Trang\KIProjects\ComprehensionDR\Datasets\HGIMCdata\Cdataset_ms
-
- % load C:\Trang\KIProjects\ComprehensionDR\Datasets\HGIMCdata\Ydataset_ms
-
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\HGIMCdata\iDrug_ms
-
-% 
-% R = drug; 
-% D = disease; 
-% A_DR_original = didr; 
+ R = drug; 
+ D = disease; 
+ A_DR_original = didr; 
 
 
+% oMat-MechDB dataset
+% a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
+% didr = a.data;
+% A_DR_original = didr';
+% b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
+% R = b.data;
+% c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
+% D = c.data;
+
+% hsdn-MechDB dataset
+% a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+% didr = a.data;
+% A_DR_original = didr';
+% b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+% R = b.data;
+% c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+% D = c.data;
+
+
+%% Checking with HGIMC datasets
+% load Datasets\HGIMCdata\Fdataset_ms
+% load Datasets\HGIMCdata\Cdataset_ms
+% load Datasets\HGIMCdata\Ydataset_ms
+% load Datasets\HGIMCdata\iDrug_ms
 
 % A_DR_original = didr;
 % R = (drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
 % D = (disease_PhS+disease_DoS)/2;
 
-
-
-% %%% oMat-MechDB dataset 
-% disease = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\rare_disease_sim.csv');
-% drug = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\rare_drug_sim.csv');
-% didr = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\interact.csv');
-
-
-% drug = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_drug_sim.csv');
-% disease = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_disease_sim.csv');
-% didr = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_interact.csv');
-% 
-% 
-% 
-% R = drug; % 150 drug
-% D = disease; % 89 disease
-% A_DR_original = didr'; % 89*150
-
-
-
-
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
-% didr = a.data;
-% A_DR_original = didr';
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_drug_sim.mat');
-% R = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_sim.mat');
-% D = c.data;
-
- a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
- didr = a.data;
-A_DR_original = didr';
-b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
-R = b.data;
-c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
-D = c.data;
 
 
 %% Cross Validation
