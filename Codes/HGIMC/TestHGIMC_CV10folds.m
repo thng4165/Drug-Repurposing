@@ -6,7 +6,7 @@ addpath('Functions');
 tic;
 %% 1. Load Datesets
 
-% load Datasets\MatlabDataFiles\HDVD
+load Datasets\MatlabDataFiles\HDVD
 % load Datasets\MatlabDataFiles\LAGCN
 % load Datasets\MatlabDataFiles\Fdataset
 % load Datasets\MatlabDataFiles\Cdataset.mat
@@ -52,15 +52,15 @@ tic;
 
 %% Cross Validation
 
-% % 10 folds CV for both 0 (unknown asso) and 1 (known asso)
-% % almost same elements in each folds for both 0 and 1
+%  10 folds CV for both 0 (unknown asso) and 1 (known asso)
+
     nfolds = 10;
     positive_id1 = find(A_DR_original);
      positive_id2 = find(A_DR_original==0);
      crossval_idx1 = crossvalind('Kfold',positive_id1(:),nfolds);
      crossval_idx2 = crossvalind('Kfold',positive_id2(:),nfolds);
      crossval_idx = [crossval_idx1; crossval_idx2];
-    % crossval_idx = crossvalind('Kfold', A_DR_original(:), nfolds); %% CV matrix disease*drug
+    
 
 
 %% 2. HGIMC algorithm
@@ -79,7 +79,7 @@ tol2 = 1*1e-5;
 
  predicted_score = zeros(nr, nc); % final predicted matrix, fold by both 0 and 1
  
- %theta = 1e-6;
+
 
  for fold = 1:nfolds
     fold
@@ -112,34 +112,10 @@ tol2 = 1*1e-5;
     
  end
 
-
-  % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_HDVDdata_rerun.csv');
-% writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_LAGCNdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_Fdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_Cdata_rerun.csv');
-  % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_LRSSLdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_Ydata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_DNdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_oMatdata_rerun_neworder.csv');
- writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_hsdndata_rerun_neworder.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_iDrug_rerun.csv');
-  % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\HGIMC\Figure1run\HGIMC_SCMFDDLdata_rerun.csv'); 
-
-%% HGIMC datasets
-
-%writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\HGIMC\HGIMCwithMSdataset\HGIMC_FdataMS_HGIMCdata.csv');
-% writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\HGIMC\HGIMCwithMSdataset\HGIMC_CdataMS_HGIMCdata.csv');
-
- %writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\HGIMC\HGIMCwithMSdataset\HGIMC_YdataMS_HGIMCdata.csv');
-
-%writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\HGIMC\HGIMCwithMSdataset\HGIMC_iDrugMS_HGIMCdata.csv');
-
 %%  CV: AUC-AUPR
 %%% sorting by disease
   inputObs_matrix = A_DR_original';
   prediction_matrix = predicted_score';
-
-
 
 %%% sort inputObs_matrix by column using the decreasing order by column of prediction_matrix
   res = sort_matrix(prediction_matrix, inputObs_matrix);
@@ -193,13 +169,7 @@ r = size(inputObs_matrix, 1);
     AUC = trapz(fpr_list, tpr_list); % AUC
     AUPR = trapz(recall_list, precision_list); % AUPR
 
-    % result.AUC = AUC;  
-    % result.AUPR = AUPR; 
-    % result.prediction = prediction_matrix;
-    % 
-    % HGIMC_prediction = result;
-    % 
-
+    
     figure;
     subplot(1, 2, 1);
     plot(fpr_list, tpr_list, 'LineWidth', 2);
