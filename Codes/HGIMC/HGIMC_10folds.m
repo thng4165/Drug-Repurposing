@@ -10,21 +10,21 @@ D = disease;
 A_DR_original = didr; 
 
 % oMat-MechDB
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
+% a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
 % didr = a.data;
 % A_DR_original = didr';
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_drug_sim.mat');
+% b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
 % R = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_sim.mat');
+% c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
 % D = c.data;
 
 % hsdn-MechDB
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+% a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
 % didr = a.data;
 % A_DR_original = didr';
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+% b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
 % R = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+% c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
 % D = c.data;
 
 
