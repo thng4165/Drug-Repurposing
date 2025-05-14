@@ -11,3 +11,5 @@ Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the 
 
 # hsdn-MechDB data
 HSDNMechDB uses the disease symptoms from the Human Symptoms Disease Network (HSDN) database [
+For this dataset, we follow a similar approach as performed for the oMat-MechDB dataset, but construct a symptom-disease matrix ($M_{sd}$) using the Human Symptoms Disease Network (HSDN) database \cite{zhou2014human}, producing a large DR dataset.
+The HSDN-MechDB dataset comprises 616 diseases and 1270 drugs with 3,710 associations and 778,619 non-associations, resulting in a high sparsity of 99.52\%, 
