@@ -1,6 +1,6 @@
 
 rm(list = ls())
-setwd("C:/Trang/KIProjects/ComprehensionDR/RS_checkmodel/RSmodels/codes")
+setwd("RSmodels")
 
 myseed = 123456
 set.seed(myseed)
@@ -17,13 +17,6 @@ Asso_matrix = as.matrix(Asso_matrix) ## table
 disease_sim = rare_disease_sim
 drug_sim = rare_drug_sim
 
-# Asso = matrix(0, nrow = nrow(Asso_matrix), ncol = ncol(Asso_matrix))
-# for (i in 1:nrow(Asso_matrix)){
-#   for (j  in 1:ncol(Asso_matrix)) {
-#     Asso[i,j] = Asso_matrix[i,j]
-#   }
-# }
-# Asso_matrix = Asso
 
 ## HDVD data
 load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/HDVDdata_asso.RData")
@@ -130,7 +123,7 @@ Mising_Folds = lapply(seq_along(ele_fold), function(fold_index){
 })
 
 
-### adj matrix of each fold inlcude the missing values from the cv Asso matrix
+### adj matrix of each fold inlcudes the missing values from the cv Asso matrix
 Ad_cv = list()
 Ad_mat = list()
 for (i in 1: nFold){
@@ -147,16 +140,14 @@ for (i in 1: nFold){
   # Ad_mat[[i]] = normalize(Ad_mat[[i]])
 
 }
+### Prediction
 pred_matrix = list()
 pred_asso = list()
 for (i in 1: nFold){
-  
-  
-    
-      # reco = Recommender(Ad_mat[[i]], "IBCF",param=list(normalize = NULL, method="Cosine"))
-  
-    reco = Recommender(Ad_mat[[i]], "LIBMF")
-  # )# param=list(normalize = NULL, method="Cosine"))
+    ## IBCF package
+ # reco = Recommender(Ad_mat[[i]], "IBCF",param=list(normalize = NULL, method="Cosine"))
+    ## LIBMF
+    reco = Recommender(Ad_mat[[i]], "LIBMF")  # )# param=list(normalize = NULL, method="Cosine"))
   
   predictions = predict(reco, Ad_mat[[i]], type="ratings")
   pred_matrix[[i]] = as.matrix(predictions@data)
@@ -165,7 +156,7 @@ for (i in 1: nFold){
 
 
 
-## check if the predictions of two part associations equal to each other
+## check if the predictions of two parts associations equal to each other
 for (i in 1:nFold){
   a = any(pred_matrix[[i]][1:nr,(nr+1):(nr+nc)]==t(pred_matrix[[i]][(nr+1):(nr+nc), 1:nr]))
   print(a)
