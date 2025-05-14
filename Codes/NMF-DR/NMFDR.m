@@ -13,21 +13,21 @@ Wdr = didr;
 DiDrAMat = Wdr';
 
 % oMat-MechDB dataset 
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+% a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
 % Wdr = a.data;
 % DiDrAMat = Wdr;
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+% b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
 % DrugSimMat = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+% c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
 % DiseaseSimMat = c.data;
 
 % hsdn dataset
- a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
+ a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
  Wdr = a.data;
  DiDrAMat = Wdr;    
- b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_drug_sim.mat');
+ b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
  DrugSimMat = b.data;
- c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_sim.mat');
+ c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
  DiseaseSimMat = c.data;
 
 
