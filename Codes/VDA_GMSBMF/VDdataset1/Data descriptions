@@ -1,0 +1,5 @@
+## Dataset
+Data is located in the directory: ./VDdataset1 <br>    
+matDrugVirus.txt <-- drug-virus matrix   <br> 
+matDrugDrug.txt <-- drug-drug matrix <br> 
+matVirusVirus.txt <-- virus-virus matrix   <br> 
