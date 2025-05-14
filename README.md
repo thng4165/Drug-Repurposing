@@ -9,17 +9,18 @@ the receiver operating characteristic (AUC) and area under the precision-recall 
 impact of data sparsity, and compare our findings with previous benchmarking studies.
 
 # Description
-Codes
-Datasets
-
 This repository contains codes and datasets used in our study on benchmarking heterogeneous network-based methods for drug repurposing. It includes data preprocessing, model training, evaluation scripts, and result visualization.
+
+## Codes
+Each method is provided in a separate folder. A README file is included in each folder to describe the corresponding method and how to run it.
 
 
 ## Datasets
-Datasets can be downloaded from 
-More information of six public datasets at https://zenodo.org/records/8357512
+Six public datasets were downloaded from https://zenodo.org/records/8357512. Additional information is also available at this link.
+We provide separate Matlab data files for methods implemented in Matlab, and R data files for methods implemented in R.
 
 
-## Evaluation
+## Evaluation Results
+
 
 
