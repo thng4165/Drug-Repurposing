@@ -23,16 +23,21 @@ methodset  = {'VDA-GMSBMF'};
      Wvv = disease; %load([datadir,filesep,'matVirusVirus.txt']   ); 
      Wdd = drug; %%load([datadir,filesep,'matDrugDrug.txt']  ); 
 
-    %% oMat-MechDB dataset 
-    a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
-    Wdv = a.data;   
-    b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
-    Wdd = b.data;
-    c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
-    Wvv = c.data;
+    % oMat-MechDB dataset 
+    % a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
+    % Wdv = a.data;   
+    % b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
+    % Wdd = b.data;
+    % c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
+    % Wvv = c.data;
 
     % hsdn-MechDB dataset
-
+    % a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+    % Wdv = a.data; 
+    % b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+    % Wdd = b.data;
+    % c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+    % Wvv = c.data;
 
 
 
