@@ -21,7 +21,7 @@ We have added two additional functions:
 
 *```TestBNNR_CV10folds.m```: Evaluates the OMC model using 10-fold cross-validation.
 
-How to Run
+## How to Run
 Run "Demo_OMC2.m" to test the OMC algorithm on the sample dataset.
 
 Run "TestOMC_CV10folds.m" to reproduce the 10-fold cross-validation results reported in our paper.
