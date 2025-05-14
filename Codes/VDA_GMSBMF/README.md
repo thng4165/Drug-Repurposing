@@ -38,11 +38,7 @@ A_VDA_GMSBMF.m: VDA-GKSBMF algorithm  <br>
 % M_recovery: matrix for predicted drug-virus scores <br> 
 
 
-## Dataset
-Data is located in the directory: ./VDdataset1 <br>    
-matDrugVirus.txt <-- drug-virus matrix   <br> 
-matDrugDrug.txt <-- drug-drug matrix <br> 
-matVirusVirus.txt <-- virus-virus matrix   <br> 
+
 
 ## cite
 [1] Yang, et al. Computational drug repositioning based on multi-similarities bilinear matrix factorization. Briefings in Bioinformatics 22.4 (2021): bbaa267. <br> 
