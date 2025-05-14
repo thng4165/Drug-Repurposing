@@ -13,21 +13,21 @@ Wdr = didr;
 Wrd = Wdr';
 
 % oMat-MechDB
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
+% a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
 % Wrd = a.data;
 % Wdr = Wrd';
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_drug_sim.mat');
+% b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
 % Wrr = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_sim.mat');
+% c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
 % Wdd = c.data;
 
 % hsdn-MechDB
-% a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+% a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
 % Wrd = a.data;
 % Wdr = Wrd';
-% b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+% b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
 % Wrr = b.data;
-% c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+% c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
 % Wdd = c.data;
 
 
@@ -61,14 +61,12 @@ nfolds = 10;
 for fold = 1:nfolds
     fold
     
-    Tdat0.fold_number = fold;
     train_idx = find(crossval_idx ~= fold); 
     test_idx  = find(crossval_idx == fold);
 
     train_data = Wdr; % train matrix
     train_data(test_idx) = NaN;
-    Tdat0.train_set = train_data;
-    Tdat0.test_idx = test_idx;
+    
   
     WRdr = train_data; 
     WRdr(test_idx) = theta;
@@ -80,8 +78,7 @@ for fold = 1:nfolds
     M_recovery = WW((t1-dn+1) : t1, 1 : dr);
     %M_recovery = (M_recovery');
     predicted_score(test_idx) = M_recovery(test_idx); 
-    Tdat0.train_approx = M_recovery;
-    Tdat0.test_approx = predicted_score(test_idx);
+    
 end
 
 %%  CV: AUC-AUPR
