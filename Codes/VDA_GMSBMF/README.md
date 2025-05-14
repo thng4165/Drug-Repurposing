@@ -1,9 +1,8 @@
+# VDA_GMSBMF
+
 # Drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization .
-Coronavirus disease 2019 (COVID-19), a disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), is currently spreading rapidly around the world. Since SARS-CoV-2 seriously threatens human life and health as well as the development of the world economy, it is very urgent to identify effective drugs against this virus. However, traditional methods to develop new drugs are costly and time-consuming, which makes drug repositioning a promising exploration direction for this purpose. In this study, we collected known antiviral drugs to form five virus-drug association datasets, and then explored drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization (VDA-GKSBMF). By the 5-fold cross-validation, we found that VDA-GKSBMF has an area under curve (AUC) value of 0.8851, 0.8594, 0.8807, 0.8824, and 0.8804 respectively on the five datasets, which are higher than those of other state-of-art algorithms in four datasets. Based on known virus-drug association data, we used VDA-GKSBMF to prioritize the top-k candidate antiviral drugs that are most likely to be effective against SARS-CoV-2. We confirmed that the top-10 drugs can be molecularly docked with virus spikes protein/human ACE2 by AutoDock on five datasets. Among them, four antiviral drugs ribavirin, remdesivir, oseltamivir, and zidovudine have been under clinical trials or supported in recent literatures. The results suggest that VDA-GKSBMF is an effective algorithm for identifying potential antiviral drugs against SARS-CoV-2.     
+VDA_GMSBMF is a MF-based method which employs Gaussian kernel similarity and bilinear matrix factorization to explore potential virus-drug associations for SARS-CoV-2. Particularly, VDAGKSBMF applies Gaussian kernel similarity to the association matrix to enhance both virus and drug similarity, which improves the redictive capacity of bilinear matrix factorization [1]. This approach identifies new antiviral drugs by predicting unknown virus-drug associations and optimizing the model with the alternating-direction multiplier method (ADMM). Although originally designed for drug-virus associations, VDA-GKSBMF can also be applied to other drug disease association datasets, as used in this study.
 
-
-## Requirements
-Matlab 2016 or above.   
 
 
 ## Codes 
@@ -30,11 +29,6 @@ matVirusVirus.txt <-- virus-virus matrix   <br>
 The results will be automatically saved into the directory: Results.   <br>
 
 ## cite
-If you use this code in your research, please cite: <br> 
-Yang, et al. Computational drug repositioning based on multi-similarities bilinear matrix factorization. Briefings in Bioinformatics 22.4 (2021): bbaa267. <br> 
+[1] Yang, et al. Computational drug repositioning based on multi-similarities bilinear matrix factorization. Briefings in Bioinformatics 22.4 (2021): bbaa267. <br> 
 Wang, et al. Drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization. <br>  
 
-
-
-## contact<br>
-Email: xiang.ju@foxmail.com  
