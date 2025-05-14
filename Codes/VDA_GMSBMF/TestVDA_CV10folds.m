@@ -11,44 +11,27 @@ methodset  = {'VDA-GMSBMF'};
     nCV = 5; nfold  = 10; CVtype = 'CVa';    
   
     %% 1. Load Datesets
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\HDVD    
-    % load LAGCN
-    % load Fdataset
-    % load Cdataset
-    % load LRSSL
-    % load Ydataset
-    % load DNdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\SCMFDD_L
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\iDrug
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\DNdataset
+    % load Datasets\MatlabDataFiles\HDVD    
+    % load Datasets\MatlabDataFiles\LAGCN
+    % load Datasets\MatlabDataFiles\Fdataset
+    % load Datasets\MatlabDataFiles\Cdataset
+    % load Datasets\MatlabDataFiles\LRSSL
+    % load Datasets\MatlabDataFiles\Ydataset
+   
 
-    % Wdv = didr'; %load([datadir,filesep,'matDrugVirus.txt']   ); 
-    % Wvv = disease; %load([datadir,filesep,'matVirusVirus.txt']   ); 
-    % Wdd = drug; %%load([datadir,filesep,'matDrugDrug.txt']  ); 
+     Wdv = didr'; %load([datadir,filesep,'matDrugVirus.txt']   ); 
+     Wvv = disease; %load([datadir,filesep,'matVirusVirus.txt']   ); 
+     Wdd = drug; %%load([datadir,filesep,'matDrugDrug.txt']  ); 
 
     %% oMat-MechDB dataset 
-    % disease = readmatrix('rare_disease_sim.csv');
-    % drug = readmatrix('rare_drug_sim.csv');
-    % didr = readmatrix('interact.csv');
-
-    % drug = readmatrix('hsdn_drug_sim.csv');
-    % disease = readmatrix('hsdn_disease_sim.csv');
-    % didr = readmatrix('hsdn_interact.csv');
-
-    % 
-    % Wdv = didr; %load([datadir,filesep,'matDrugVirus.txt']   ); 
-    % Wvv = disease; %load([datadir,filesep,'matVirusVirus.txt']   ); 
-    % Wdd = drug; %%load([datadir,filesep,'matDrugDrug.txt']  ); 
-
-a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
-    Wdv = a.data;
-    
-    b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_drug_sim.mat');
+    a = load('Datasets\MatlabDataFiles\rare_disease_drug.mat');
+    Wdv = a.data;   
+    b = load('Datasets\MatlabDataFiles\rare_drug_sim.mat');
     Wdd = b.data;
-    c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_sim.mat');
+    c = load('Datasets\MatlabDataFiles\rare_disease_sim.mat');
     Wvv = c.data;
 
-
+    % hsdn-MechDB dataset
 
 
 
