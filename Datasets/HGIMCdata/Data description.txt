@@ -4,8 +4,7 @@ Three datasets containing multiple similarity measures for drugs and diseases:
 2. Fdataset_ms
 3. Ydataset_ms
 
-## Detail
-
+Detail:
 Wrname: the DrugBank IDs of drugs;
 Wdname: the OMIM IDs of diseases;
 drug_ChemS: chemical structure similarity matrix;
