@@ -1,29 +1,25 @@
 # BNNR
 BNNR is a novel computational method, which utilizes Bounded Nuclear Norm Regularization algorithm to identify potential novel indications for known or new drugs. The code in this package implements Bounded Nuclear Norm Regularization (BNNR) for drug repositioning, which is implemented in Matlab2014a.
 
-The code is dowloaded from \ref{https://github.com/BioinformaticsCSU/BNNR/tree/master}{https://github.com/BioinformaticsCSU/BNNR/tree/master}
-
 
 # Description
-"Demo.m" demonstrates the experimental result on Fdataset by BNNR.
 
-"BNNR.m" is the function of BNNR algorithm.
+The original code was downloaded from https://github.com/BioinformaticsCSU/BNNR/tree/master and includes the following three functions:
 
-"svt.m" is the function of singular value thresholding operator.
+"Demo.m": Demonstrates the experimental results on the Fdataset using the BNNR algorithm.
 
-Contact:
-If you have any questions or suggestions with the code, please let us know. Contact Mengyun Yang at mengyun_yang@126.com
+"BNNR.m": The core implementation of the BNNR algorithm.
 
-# Citation
-Yang M, Luo H, Li Y, et al. Drug repositioning based on bounded nuclear norm regularization[J]. Bioinformatics, 2019, 35(14): i455-i463.
-```
-@article{Yang2019Drug,
-  title={Drug repositioning based on bounded nuclear norm regularization},
-  author={Yang, Mengyun  and  Luo, Huimin  and  Li, Yaohang  and  Wang, Jianxin},
-  volume={35},
-  number={14},
-  pages={i455--i463},
-  year={2019},
-  publisher={Oxford University Press}
-}
-```
+"svt.m": Implements the Singular Value Thresholding (SVT) operator.
+
+We have added two additional functions:
+
+"sort_matrix.m": Sorts or ranks the values in each column of a matrix.
+
+"TestBNNR_CV10folds.m":  Evaluates the BNNR model using 10-fold cross-validation.
+
+# How to Run
+Run "Demo.m" to test the BNNR algorithm on the sample dataset.
+
+Run "TestBNNR_CV10folds.m" to reproduce the 10-fold cross-validation results reported in our paper.
+
