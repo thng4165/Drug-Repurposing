@@ -16,17 +16,17 @@ This repository contains codes and datasets used in our study on benchmarking he
 Each method is provided in a separate folder. A README file is included in each folder to describe the corresponding method and how to run it.
 
 
-## Datasets
+### Datasets
 Six public datasets were downloaded from https://zenodo.org/records/8357512. Additional information is also available at this link.
 
 We provide here separate Matlab data files for methods implemented in Matlab, and R data files for methods implemented in R.
 
 Datasets include 6 public datasets and 2 curated datasets.
 
-## Datail of curated datasets
+### Datail of curated datasets
 
 
-# Evaluation Results
+## Evaluation Results
 
 
 
