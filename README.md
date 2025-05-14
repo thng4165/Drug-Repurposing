@@ -11,7 +11,7 @@ impact of data sparsity, and compare our findings with previous benchmarking stu
 # Description
 This repository contains codes and datasets used in our study on benchmarking heterogeneous network-based methods for drug repurposing. It includes data preprocessing, model training, evaluation scripts, and result visualization.
 
-## Codes
+## Codes/Methods
 Each method is provided in a separate folder. A README file is included in each folder to describe the corresponding method and how to run it.
 
 
@@ -20,10 +20,12 @@ Six public datasets were downloaded from https://zenodo.org/records/8357512. Add
 
 We provide here separate Matlab data files for methods implemented in Matlab, and R data files for methods implemented in R.
 
-## Curated datasets
+Datasets include 6 public datasets and 2 curated datasets.
+
+## Datail of curated datasets
 
 
-## Evaluation Results
+# Evaluation Results
 
 
 
