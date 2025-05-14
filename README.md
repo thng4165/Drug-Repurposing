@@ -8,7 +8,9 @@ IBCF and LIBMF. We assess their performance using multiple evaluation metrics in
 the receiver operating characteristic (AUC) and area under the precision-recall curve (AUPR), analyze the
 impact of data sparsity, and compare our findings with previous benchmarking studies.
 
-
+# Description
+Codes
+Datasets
 
 This repository contains codes and datasets used in our study on benchmarking heterogeneous network-based methods for drug repurposing. It includes data preprocessing, model training, evaluation scripts, and result visualization.
 
