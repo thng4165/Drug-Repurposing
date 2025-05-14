@@ -30,9 +30,9 @@ Run "TestVDA_CV10folds.m" to reproduce the 10-fold cross-validation results on t
 ## Codes 
 A_VDA_GMSBMF.m: VDA-GKSBMF algorithm  <br>
 % Input:  <br>
-% matDV: drug-virus matrix <br> 
+% matDV: drug-virus matrix/drug-disease matrix <br> 
 % Wdd: drug-drug matrix <br> 
-% Wvv: virus-virus matrix <br> 
+% Wvv: virus-virus matrix / disease - disease matrix<br> 
 % others: parameters <br> 
 % Ouput: <br>
 % M_recovery: matrix for predicted drug-virus scores <br> 
