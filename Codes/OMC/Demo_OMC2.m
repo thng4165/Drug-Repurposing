@@ -1,5 +1,5 @@
 clear all
-addpath('C:\Trang\KIProjects\ComprehensionDR\OMC_method\OMC-master');
+addpath('OMC');
 tic;
 rng('default')
 myseed = 2024;
@@ -7,39 +7,20 @@ rng(myseed);
 
 %% 1. Load Datesets
 
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\HDVD
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LAGCN
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LRSSL
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
-%load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\DNdataset
-% Wrr = drug;
-% Wdd = disease;
-% Wdr = didr;
-% Wrd = Wdr';
+ load Datasets\MatlabDataFiles\HDVD
+% load Datasets\MatlabDataFiles\LAGCN
+% load Datasets\MatlabDataFiles\Fdataset
+% load Datasets\MatlabDataFiles\Cdataset
+% load Datasets\MatlabDataFiles\LRSSL
+% load Datasets\MatlabDataFiles\Ydataset
+%load Datasets\MatlabDataFiles\DNdataset
 
+ Wrr = drug;
+ Wdd = disease;
+ Wdr = didr;
+ Wrd = Wdr';
 
-%% CSV files
-%%% oMat-MechDB dataset 
-
-% disease = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\rare_disease_sim.csv');
-% drug = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\rare_drug_sim.csv');
-% didr = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\interact.csv');
-
-
-%%% hsdn dataset
-% disease = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_disease_sim.csv');
-% drug = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_drug_sim.csv');
-% didr = readmatrix('C:\Trang\KIProjects\ComprehensionDR\Datasets\CSVDatafiles\hsdn_interact.csv');
-% 
-% 
-% Wrr = drug; % 150 drug
-% Wdd = disease; % 89 disease
-% Wdr = didr'; % 89*150
-% Wrd = Wdr'; % 150*89
-
-
+% oMat-MechDB
 % a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\rare_disease_drug.mat');
 % Wrd = a.data;
 % Wdr = Wrd';
@@ -49,14 +30,14 @@ rng(myseed);
 % Wdd = c.data;
 
 
-
-a = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
-Wrd = a.data;
-Wdr = Wrd';
-b = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
-Wrr = b.data;
-c = load('C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
-Wdd = c.data;
+% hsdn-MechDB
+% a = load('Datasets\MatlabDataFiles\hsdn_MechDB_dd_association_numeric.mat');
+% Wrd = a.data;
+% Wdr = Wrd';
+% b = load('Datasets\MatlabDataFiles\hsdn_MechDB_drug_sim.mat');
+% Wrr = b.data;
+% c = load('Datasets\MatlabDataFiles\hsdn_MechDB_disease_sim_GIP.mat');
+% Wdd = c.data;
 
 
 %% Cross Validation
@@ -82,7 +63,7 @@ maxiter = 300;
 
 
 predicted_score = zeros(nr, nc); % final predicted matrix, fold by both 0 and 1
-Null_dist = {};
+
 
 for fold = 1:nfolds
     fold
@@ -134,21 +115,9 @@ for fold = 1:nfolds
 
     predicted_score(test_idx) = M_recovery(test_idx); 
 
-    % Tdat0.train_approx = M_recovery;
-    % Tdat0.test_approx = predicted_score(test_idx);
+    
 end
-% writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_HDVDdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_LAGCNdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_Fdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_Cdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_LRSSLdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_Ydata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_oMatdata_rerun_neworder.csv');
- writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_hsdndata_rerun_neworder.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_SCMFDDLdata_rerun.csv');
- %writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_DNdata_rerun.csv');
- % writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_iDrugdata_rerun.csv');
-  %writematrix(predicted_score, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\OMC_method\OMC-master\Figure1tun\OMC_TLHGBIdata_rerun.csv');
+
 %%  CV: AUC-AUPR
 %%% sorting by disease
   % inputObs_matrix = didr'; % transpose to sort by column - disease
