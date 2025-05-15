@@ -86,8 +86,6 @@ zer = c(Asso_matrix) == 0
 pos_index = which(pos) 
 zer_index = which(zer)
 
-
-  
   
   nr = nrow(Asso_matrix)  # Number of rows in the original matrix
   nc = ncol(Asso_matrix)  # Number of columns in the original matrix
@@ -127,7 +125,6 @@ zer_index = which(zer)
   for (fold_index in 1:nFold){
     fold = Mising_Folds[[fold_index]]
     fold[is.na(fold)] = 0
-    # fold[is.na(fold)] = BNNR[is.na(fold)]
     temp = drug_sim %*% fold %*% disease_sim
     #temp = disease_sim %*% fold %*% drug_sim
     temp = fold * temp
@@ -261,9 +258,6 @@ zer_index = which(zer)
     precision_list=precision_list
   )
 
-save(res_metric, file = "C:/Trang/KIProjects/ComprehensionDR/RerunMatlabCode/NMF_NMFPermutation/Result_1run/NMF_Standard/NMFS_oMat_res_metric.RData")
-save(prediction_matrix, file = "C:/Trang/KIProjects/ComprehensionDR/RerunMatlabCode/NMF_NMFPermutation/Result_1run/NMF_Standard/NMFS_oMat_prediction_neworder.RData")
-   
 end.time <- Sys.time()
 
 time.taken <- end.time - start.time
