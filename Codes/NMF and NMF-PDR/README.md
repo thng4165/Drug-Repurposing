@@ -3,7 +3,7 @@
 ## Description
 *```drugRepurposing_functions.R```: Contains essential functions for the NMF and NMF-PDR models, including:
 
-- "find_optimal_rank()": Determines the optimal rank for the NMF model using an SVD-based approach.
+- find_optimal_rank(): Determines the optimal rank for the NMF model using an SVD-based approach.
 
 - NMF_ELee(): Implements the NMF algorithm using Lee–Seung update rules.
 
@@ -17,16 +17,16 @@
 
 ## How to Run
 Run the appropriate script:
+
 *```TestNMF_CV10folds.R``` for the NMF model
 
 *```TestNMF_PDR_CV10folds.R``` for the NMF-PDR model
 
 For each model, specify the input dataset, including:
-The drug–disease association matrix
-Disease similarity matrix
-Drug similarity matrix
+- The drug–disease association matrix
+- Disease similarity matrix
+- Drug similarity matrix
 
-For each model, the output including
-Each script generates:
-A predicted score matrix
-Evaluation metrics: AUC and AUPR
+For each model, the output including:
+- A predicted score matrix
+- Evaluation metrics: AUC and AUPR
