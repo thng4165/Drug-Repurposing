@@ -103,61 +103,6 @@ NMF_ELee<-function(V, k, M=NULL, itnum = 100, eps=1e-9, epsDiff=1e-4, seed=mysee
 }
 
 
-# nmfB <- NMF_ELee(V = B, M=Mask, k = rank_fold, itnum=200, eps=1e-9, epsDiff=1e-3)
-# length(nmfB$err)
-# plot(nmfB$err)
-# plot(nmfB$errDiff)
-
-
-
-
-# NMF_ELee_sparse<-function(V, k, M=NULL, itnum = 100, eps=1e-9, epsDiff=1e-4, be=0.5, al=0.5, seed=myseed){
-#   # V: input matrix
-#   # k: selected rank
-#   # M: masked matrix (use in future)
-#   # itNum: number of iterations
-#   
-#   #set.seed(seed)
-#   
-#   n=nrow(V)
-#   m=ncol(V)
-#   W<-matrix(runif(n*k), nrow = n)
-#   H<-matrix(runif(k*m), nrow = k)
-#   
-#   # W<-matrix(rnorm(n*k), nrow = n)
-#   # H<-matrix(rnorm(k*m), nrow = k)
-#   
-#   
-#   V1=V
-#   errDiff=err= NULL
-#   e1=1000
-#   for(i in 1:itnum){
-#     u_H<-t(W)%*%V1 - be*H
-#     d_H<-t(W)%*%W%*%H + 1e-9
-#     H<-H*(u_H/d_H)
-#     
-#     u_W<-V1%*%t(H) - al*W
-#     d_W<-W%*%H%*%t(H) + 1e-9
-#     W<-W*(u_W/d_W)
-#     
-#     e= sum((V1-W%*%H)^2)
-#     ed= abs(e-e1)/e1
-#     
-#     err=c(err,e)
-#     errDiff=c(errDiff,ed)
-#     
-#     if (e < eps |  ed < epsDiff) break()
-#     
-#     e1=e
-#     
-#     if (!is.null(M)) V1= M*V + (1-M) * V1 # Trang's proposal
-#     #if (!is.null(M)) V1= (1-M)*V + M * V1
-#     
-#   }
-#   
-#   return(list(W = W, H = H, err = err, errDiff=errDiff))
-# }
-
 
 #### Sort matrix
 sort_matrix<-function(score_matrix,interact_matrix){
@@ -185,33 +130,6 @@ sort_matrix<-function(score_matrix,interact_matrix){
   
 }
 
-
-
-#### Sort matrix
-sort_vector<-function(score_matrix,interact_matrix){
-  #For each disease in columns, sort the score values (predicted) and change the values of the interaction matrix accordingly. In downstream step, go down to each row, compute performance metrics for top 1, 2, 3, .. to summarize the final results.
-  
-  sort_index=score_matrix
-  
-    x=-score_matrix[i]
-    #x=score_matrix[i]
-    o=order(x, decreasing = FALSE)
-    sort_index[i]=o
-  
-  
-  score_sorted = score_matrix
-  y_sorted = interact_matrix
-  
-    score_sorted[i] = score_matrix[i][sort_index[i]]
-    y_sorted[i] = interact_matrix[i][sort_index[i]]
-  
-  rownames(score_sorted)=NULL #row names is not meaningful, so remove them to avoid potential misunderstanding
-  rownames(y_sorted)=NULL
-  
-  res=list(y_sorted=y_sorted,score_sorted=score_sorted,sort_index=sort_index)
-  return(res)
-  
-}
 
 
 
