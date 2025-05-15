@@ -1,45 +1,46 @@
 rm(list = ls())
-setwd("C:/Trang/KIProjects/ComprehensionDR/RerunMatlabCode/NMF_NMFPermutation")
 
-start.time <- Sys.time()
+#start.time <- Sys.time()
 
 myseed = 2024
 set.seed(myseed)
 
 #### I. Load data
-load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/rare_disease_interact.Rdata")
-load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/rare_disease_sim.RData")
-load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/rare_drug_sim.RData")
+## oMat-MechDB
+load("Datasets/RDataFiles/rare_disease_interact.Rdata")
+load("Datasets/RDataFiles/rare_disease_sim.RData")
+load("Datasets/RDataFiles/rare_drug_sim.RData")
 Asso_matrix = (interact)
 disease_sim = rare_disease_sim
 disease_sim = disease_sim[colnames(Asso_matrix), colnames(Asso_matrix)]
 drug_sim = rare_drug_sim
 drug_sim = drug_sim[row.names(Asso_matrix), row.names(Asso_matrix)]
 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/HDVDdata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/HDVDdata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/HDVDdata_disease_sim.RData")
+## HDVD data
+# load("Datasets/RDataFiles/HDVDdata_asso.RData")
+# load("Datasets/RDataFiles/HDVDdata_drug_sim.RData")
+# load("Datasets/RDataFiles/HDVDdata_disease_sim.RData")
 # Asso_matrix = t(HDVDdata_asso)
 # disease_sim = HDVDdata_disease_sim
 # drug_sim = HDVDdata_drug_sim
-# 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LAGCNdata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LAGCNdata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LAGCNdata_disease_sim.RData")
+
+## LAGCN data
+# load("Datasets/RDataFiles/LAGCNdata_asso.RData")
+# load("Datasets/RDataFiles/LAGCNdata_drug_sim.RData")
+# load("Datasets/RDataFiles/LAGCNdata_disease_sim.RData")
 # Asso_matrix = (LAGCNdata_asso)
 # disease_sim = LAGCNdata_disease_sim
 # drug_sim = LAGCNdata_drug_sim
-# 
-# # 
+
+## Ydata  
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Ydata_asso.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Ydata_drug_sim.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Ydata_disease_sim.RData")
 # Asso_matrix = Ydata_asso
 # disease_sim = Ydata_disease_sim
 # drug_sim = Ydata_drug_sim
-# # 
-# 
-# 
+
+## Fdata
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Fdata_asso.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Fdata_drug_sim.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Fdata_disease_sim.RData")
@@ -47,16 +48,15 @@ drug_sim = drug_sim[row.names(Asso_matrix), row.names(Asso_matrix)]
 # disease_sim = Fdata_disease_sim
 # drug_sim = Fdata_drug_sim
 
-# 
-# 
+## Cdata
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Cdata_asso.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Cdata_drug_sim.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/Cdata_disease_sim.RData")
 # Asso_matrix = Cdata_asso
 # disease_sim = Cdata_disease_sim
 # drug_sim = Cdata_drug_sim
-# # 
-# 
+
+## LRSSL data 
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LRSSLdata_asso.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LRSSLdata_drug_sim.RData")
 # load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/LRSSLdata_disease_sim.RData")
@@ -64,7 +64,6 @@ drug_sim = drug_sim[row.names(Asso_matrix), row.names(Asso_matrix)]
 # disease_sim = LRSSLdata_disease_sim
 # drug_sim = LRSSLdata_drug_sim
 
-# 
 ## hsdn-MechDB
 load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/hsdn_MechDB_dd_association.RData")
 load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/hsdn_MechDB_drug_sim.RData")
@@ -74,40 +73,6 @@ disease_sim = hsdn_MechDB_disease_sim_GIP
 disease_sim = disease_sim[colnames(Asso_matrix), colnames(Asso_matrix)]
 drug_sim = hsdn_MechDB_drug_sim
 drug_sim = drug_sim[row.names(Asso_matrix), row.names(Asso_matrix)]
-
-# 
-# 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/SCMFDD_Ldata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/SCMFDD_Ldata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/SCMFDD_Ldata_disease_sim.RData")
-# Asso_matrix = t(SCMFDD_Ldata_asso)
-# disease_sim = SCMFDD_Ldata_disease_sim
-# drug_sim = SCMFDD_Ldata_drug_sim
-# 
-# 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/iDrugdata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/iDrugdata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/iDrugdata_disease_sim.RData")
-# Asso_matrix = t(iDrugdata_asso)
-# drug_sim = iDrugdata_drug_sim
-# disease_sim = iDrugdata_disease_sim
-# 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/DNdata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/DNdata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/DNdata_disease_sim.RData")
-# Asso_matrix = DNdata_asso
-# disease_sim = DNdata_disease_sim
-# drug_sim = DNdata_drug_sim
-# 
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/TLHGBIdata_asso.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/TLHGBIdata_drug_sim.RData")
-# load("C:/Trang/KIProjects/ComprehensionDR/Datasets/RDataFiles/TLHGBIdata_disease_sim.RData")
-# Asso_matrix = t(TLHGBIdata_asso)
-# disease_sim = TLHGBIdata_disease_sim
-# drug_sim = TLHGBIdata_drug_sim
-# 
-
-
 
 
 #### II. Functions
