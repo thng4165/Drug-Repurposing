@@ -17,13 +17,14 @@ Each method is provided in a separate folder. A README file is included in each 
 
 
 ### Datasets
-Six public datasets were downloaded from https://zenodo.org/records/8357512. Additional information is also available at this link.
 
-We provide here separate Matlab data files for methods implemented in Matlab, and R data files for methods implemented in R.
+We provide here separate mat data files for methods implemented in Matlab, and RData files for methods implemented in R.
 
 Datasets include 6 public datasets and 2 curated datasets.
 
-### Datail of curated datasets
+Six public datasets were downloaded from https://zenodo.org/records/8357512. Additional information is also available at this link.
+
+Details of two curated datasets are provided in the CuratedDataset folder.
 
 
 ## Evaluation Results
