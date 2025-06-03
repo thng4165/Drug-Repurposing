@@ -76,10 +76,6 @@ tol2 = 1*1e-5;
 
 [pr_x, pr_y, ~, AUPR] = perfcurve(inputObs_matrix, prediction_matrix, 1, 'xCrit', 'reca', 'yCrit', 'prec');
 
-% writematrix(roc_x, 'HGIMC_roc_x_Fdata.csv');
-% writematrix(roc_y, 'HGIMC_roc_y_Fdata.csv');
-% writematrix(pr_x, 'HGIMC_pr_x_Fdata.csv');
-% writematrix(pr_y, 'HGIMC_pr_y_Fdata.csv');
 
 % Plot ROC curve
 figure;
