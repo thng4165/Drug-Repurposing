@@ -14,4 +14,4 @@ factorization in shared memory systems (LIBMF) for application in drug repurposi
 # How to Run
 * Select the dataset and specify the package (IBCF or LIBMF) to run within the code.
   
-* Run "TestRSpackages_CV10folds.R" to reproduce the 10-fold cross-validation results reported in our paper.
+* Run ```TestRSpackages_CV10folds.R``` to reproduce the 10-fold cross-validation results reported in our paper.
