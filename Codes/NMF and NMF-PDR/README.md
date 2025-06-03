@@ -7,9 +7,9 @@ We introduce NMF-PDR, a proposed permutation approach for NMF in DR. NMF-PDR ass
 
 * ```drugRepurposing_functions.R```: Contains essential functions for the NMF and NMF-PDR models, including:
 
-*find_optimal_rank(): Determines the optimal rank for the NMF model using an SVD-based approach.
+    - find_optimal_rank(): Determines the optimal rank for the NMF model using an SVD-based approach.
 
-*NMF_ELee(): Implements the NMF algorithm using Lee–Seung update rules.
+     - NMF_ELee(): Implements the NMF algorithm using Lee–Seung update rules.
 
 *sort_matrix(): Sorts or ranks the values in each column of a matrix.
 
