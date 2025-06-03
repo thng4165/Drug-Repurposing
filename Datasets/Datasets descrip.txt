@@ -1,17 +1,1 @@
 
-
-(1) Fdataset
-Wrname: the DrugBank IDs of drugs;
-Wdname: the OMIM IDs of diseases;
-drug: drug similarity matrix;
-disease: disease similarity matrix;
-didr: disease-drug association matrix.
-
-
-
-(4) Cdataset
-Wrname: the DrugBank IDs of drugs;
-Wdname: the OMIM IDs of diseases;
-drug: drug similarity matrix;
-disease: disease similarity matrix;
-didr: disease-drug association matrix.
