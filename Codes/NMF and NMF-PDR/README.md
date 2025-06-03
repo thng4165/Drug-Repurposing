@@ -1,9 +1,5 @@
 # Non-negative Matrix Factorization (NMF) and Permutation-based NMF (NMF-PDR)
-NMF is an ideal choice for drug repurposing models due to its ability to reveal hidden patterns and relationships within datasets, which is particularly important for uncovering unknown associations in the drug-disease association matrix. NMF aims to decompose a given non-negative matrix $V\in R^{n\times m}$ into the product of two non-negative matrices $W \in R^{n\times r}$ and $H \in R^{r\times m}$ such that 
-\begin{equation}
-    V \approx WH,
-\end{equation}\label{eq.nmf.decompose}
- where rank $r$ is the dimension of drug feature and disease feature in the lower-rank spaces. This rank parameter determines the size of the new sub-matrices and is the primary parameter of NMF.
+NMF is an ideal choice for drug repurposing models due to its ability to reveal hidden patterns and relationships within datasets, which is particularly important for uncovering unknown associations in the drug-disease association matrix. NMF aims to decompose a given non-negative matrix $V\in R^{n\times m}$ into the product of two non-negative matrices $W \in R^{n\times r}$ and $H \in R^{r\times m}$ such that $V \approx WH$, where rank $r$ is the dimension of drug feature and disease feature in the lower-rank spaces. This rank parameter determines the size of the new sub-matrices and is the primary parameter of NMF.
  
 # Description
 
