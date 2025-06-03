@@ -1,11 +1,11 @@
 clear all;
-   addpath('C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\BNNR')
+   % addpath('C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\BNNR')
 
     %% 1. Load Datasets%%%%%%%%%%%%%%%%%%%%%%%%
     % Load the dataset specified in the input
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-    load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
+    % load Datasets\MatlabDataFiles\Fdataset
+    % load Datasets\MatlabDataFiles\Cdataset
+    load Datasets\MatlabDataFiles\Ydataset
     
     % Extract matrices from loaded data
     Wrr = drug;
@@ -16,8 +16,8 @@ clear all;
 
     folds = 10;
 
-    BNNR_AUC = [];           % Initialize an empty array for AUC
-BNNR_AUPR = [];          % Initialize an empty array for AUPR
+   BNNR_AUC = [];           % Initialize an empty array for AUC
+   BNNR_AUPR = [];          % Initialize an empty array for AUPR
 
 
 seed_values = randsample(10000:20000, 9, false); 
@@ -25,7 +25,7 @@ seed_values = randsample(10000:20000, 9, false);
 
 parfor iseed = 1:length(seed_values)
 
-    iseed 
+  
     fprintf('iseed: %d\n', iseed);
     
 %% Cross Validation
@@ -93,7 +93,3 @@ end
 BNNR_AUC(iseed) = AUC;
  BNNR_AUPR(iseed) = AUPR;
 end
-
-writematrix(BNNR_AUC, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\BNNR\result25runs_evaluation_original\BNNR_original_Ydata_AUC_9runs_rerun.csv');
-writematrix(BNNR_AUPR, 'C:\Trang\KIProjects\ComprehensionDR\RerunMatlabCode\BNNR\result25runs_evaluation_original\BNNR_original_Ydata_AUPR_9runs_rerun.csv');
-
