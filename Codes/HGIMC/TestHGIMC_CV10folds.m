@@ -38,7 +38,7 @@ load Datasets\MatlabDataFiles\HDVD
 % D = c.data;
 
 
-%% Checking with HGIMC datasets
+%% Checking with datasets with multiple similarity (HGIMCdata folder)
 % load Datasets\HGIMCdata\Fdataset_ms
 % load Datasets\HGIMCdata\Cdataset_ms
 % load Datasets\HGIMCdata\Ydataset_ms
