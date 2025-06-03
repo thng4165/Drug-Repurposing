@@ -22,4 +22,4 @@ Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the 
 We follow a similar approach as performed for the oMat-MechDB dataset, but construct a symptom-disease matrix ($M_{sd}$) using the Human Symptoms Disease Network (HSDN) database [1]. The HSDN-MechDB dataset comprises 616 diseases and 1270 drugs with 3,710 associations and 778,619 non-associations, resulting in a high sparsity of 99.52\%, 
 
 # Citation
-Zhou, XueZhong, Jörg Menche, Albert-László Barabási, and Amitabh Sharma. "Human symptoms–disease network." Nature communications 5, no. 1 (2014): 4212.
+[1] Zhou, XueZhong, Jörg Menche, Albert-László Barabási, and Amitabh Sharma. "Human symptoms–disease network." Nature communications 5, no. 1 (2014): 4212.
