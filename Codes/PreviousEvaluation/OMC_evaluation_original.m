@@ -3,9 +3,9 @@ addpath('C:\Trang\KIProjects\ComprehensionDR\OMC_method\OMC-master');
 
 %% 1. Load Datesets
 
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-    load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
+    % load Datasets\MatlabDataFiles\Fdataset
+    % load Datasets\MatlabDataFiles\Cdataset
+    load Datasets\MatlabDataFiles\Ydataset
     
 
 Wrr = drug;
@@ -105,11 +105,6 @@ end
 
 
 
-% writematrix(roc_x, 'OMC_roc_x_Ydata.csv');
-% writematrix(roc_y, 'OMC_roc_y_Ydata.csv');
-% writematrix(pr_x, 'OMC_pr_x_Ydata.csv');
-% writematrix(pr_y, 'OMC_pr_y_Ydata.csv');
-% 
 % % Plot ROC curve
 % figure;
 % plot(roc_x, roc_y, 'b-', 'LineWidth', 2);
