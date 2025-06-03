@@ -28,6 +28,9 @@ Each method is provided in a separate folder. A README file is included in each 
 
 
 ### Evaluation Results
+* The AUC and AUPR results from 25 runs for each model are provided in the Results/AUC_AUPR_25runs folder.
+  
+* R code for visualizing these results is also included.
 
 
 
