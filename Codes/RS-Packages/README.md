@@ -9,9 +9,9 @@ factorization in shared memory systems (LIBMF) for application in drug repurposi
 
 * ```Calculate_AUC_AUPR_func.R```: Function used to calculate AUC and AUPR.
 
-* ```TestRSpackages_CV10folds.R```: Evaluates the RS packages (ICBF and LIBMF) using 10-fold cross-validation. You can choose which package to run within the script.
+* ```TestRSpackages_CV10folds.R```: Evaluates the RS package methods (ICBF and LIBMF) using 10-fold cross-validation. You can choose which method to run within the script.
 
 # How to Run
-* Select the dataset and specify the package (IBCF or LIBMF) to run within the code.
+* Select the dataset and specify the method (IBCF or LIBMF) to run within the code.
   
 * Run ```TestRSpackages_CV10folds.R``` to reproduce the 10-fold cross-validation results reported in our paper.
