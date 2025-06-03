@@ -1,5 +1,9 @@
 # NMF-DR
-Drug repurposing is a potential alternative to the traditional drug discovery process. Drug repurposing can be formulated as a recommender system that recommends novel indications for available drugs based on known drug-disease associations. This paper presents a method based on non-negative matrix factorization (NMF-DR) to predict the drug-related candidate disease indications. This work proposes a recommender system-based method for drug repurposing (NMF-DR) to predict novel drug indications by integrating drug and diseases related data sources.For this purpose, this framework first integrates two types of disease similarities, the associations between drugs and diseases, and the various similarities between drugs from different views to make a heterogeneous drug-disease interaction network. Then, an improved non-negative matrix factorization-based method is proposed to complete the drug-disease adjacency matrix with predicted scores for unknown drug-disease pairs.
+NMF-DR improve the DR performance through optimizing the rank selection, initial values, prediction step of NMF. The method begins by building a
+heterogeneous drug-disease association network, through the integration of drug and disease similarity networks. Different from the standard NMF, the NMFDR
+methodology involves three key steps: (1) selecting a suitable factorization rank r using the minimum description length (MDL) criterion; (2) initializing
+the factor matrices based on a SVD-based method; (3) predicting drug-disease association by combination of the NMF method with an accelerated hierarchical
+alternating least squares (A-HALS) algorithm.
 
 # Description
 
