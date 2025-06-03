@@ -2,28 +2,15 @@ clear all;
 rng('default'); seed = 12345; rng(seed)
 addpath("C:\Trang\KIProjects\ComprehensionDR\HGIMC");
 
-addpath('Functions');
+addpath('Functions'); % please use the functions from HGIMC methods
 %% 1. Load Datesets
- % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset.mat
-%load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\HDVD
-% load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LAGCN
- load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-     % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\LRSSL
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
-   % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\DNdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\SCMFDD_L
-
-    %load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\iDrug
-
-
-
+ % load Datasets\MatlabDataFiles\Cdataset.mat
+ load Datasets\MatlabDataFiles\Fdataset
+ % load Datasets\MatlabDataFiles\Ydataset
+  
 R = drug; 
 D = disease; 
 A_DR_original = didr; 
-
-
-
 
 %% Cross Validation
 
@@ -85,16 +72,14 @@ tol2 = 1*1e-5;
  inputObs_matrix = O; % transpose to sort by column - disease
  prediction_matrix = P;
 
-
-
 [roc_x, roc_y, ~, AUC] = perfcurve(inputObs_matrix, prediction_matrix, true);
 
 [pr_x, pr_y, ~, AUPR] = perfcurve(inputObs_matrix, prediction_matrix, 1, 'xCrit', 'reca', 'yCrit', 'prec');
 
-writematrix(roc_x, 'HGIMC_roc_x_Fdata.csv');
-writematrix(roc_y, 'HGIMC_roc_y_Fdata.csv');
-writematrix(pr_x, 'HGIMC_pr_x_Fdata.csv');
-writematrix(pr_y, 'HGIMC_pr_y_Fdata.csv');
+% writematrix(roc_x, 'HGIMC_roc_x_Fdata.csv');
+% writematrix(roc_y, 'HGIMC_roc_y_Fdata.csv');
+% writematrix(pr_x, 'HGIMC_pr_x_Fdata.csv');
+% writematrix(pr_y, 'HGIMC_pr_y_Fdata.csv');
 
 % Plot ROC curve
 figure;
