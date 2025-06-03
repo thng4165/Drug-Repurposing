@@ -18,11 +18,11 @@ Each method is provided in a separate folder. A README file is included in each 
 
 ### Datasets
 
-We provide here separate mat data files for methods implemented in Matlab, and RData files for methods implemented in R.
+For each dataset, we provide data in two formats: MATLAB (.mat files) for methods implemented in MATLAB, and R (.RData files) for methods implemented in R.
 
-Datasets include 6 public datasets and 2 curated datasets.
+The datasets include six public datasets (HDVD, LAGCN, Fdata, Cdata, Ydata, LRSSL) and two curated datasets (oMat-MechDB and HHSDN-MechDB).
 
-Six public datasets were downloaded from https://zenodo.org/records/8357512. Additional information is also available at this link.
+Six public datasets were obtained from https://zenodo.org/records/8357512, where additional information is also available.
 
 Details of two curated datasets are provided in the CuratedDataset folder.
 
