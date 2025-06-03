@@ -1,25 +1,23 @@
-# VDA_GMSBMF
-
-# Drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization .
+# VDA_GMSBMF: Drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization .
 VDA_GMSBMF is a MF-based method which employs Gaussian kernel similarity and bilinear matrix factorization to explore potential virus-drug associations for SARS-CoV-2. Particularly, VDAGKSBMF applies Gaussian kernel similarity to the association matrix to enhance both virus and drug similarity, which improves the redictive capacity of bilinear matrix factorization [1]. This approach identifies new antiviral drugs by predicting unknown virus-drug associations and optimizing the model with the alternating-direction multiplier method (ADMM). Although originally designed for drug-virus associations, VDA-GKSBMF can also be applied to other drug disease association datasets, as used in this study.
 
 
 ## Description
 The original code was downloaded from https://github.com/xiangju0208/VDA_GMSBMF/tree/main and includes the following functions:
 
-"A_VDA_GMSBMF.m": The core implementation of the VDA_GMSBMF algorithm. 
+* "A_VDA_GMSBMF.m": The core implementation of the VDA_GMSBMF algorithm. 
 
-"getKfoldCrossValidMatIndSet.m": 
+* "getKfoldCrossValidMatIndSet.m": 
 
-"getPerfMetricROCcompute.m": 
+* "getPerfMetricROCcompute.m": 
 
-"main.m": Performs cross-validation using the drug–virus dataset in VDdataset1.
+* "main.m": Performs cross-validation using the drug–virus dataset in VDdataset1.
 
 We have added two additional functions:
 
-"sort_matrix.m": Sorts or ranks the values in each column of a matrix.
+* "sort_matrix.m": Sorts or ranks the values in each column of a matrix.
 
-"TestVDA_CV10folds.m": Evaluates the VDA_GMSBMF model using 10-fold cross-validation on drug-disease datasets.
+* "TestVDA_CV10folds.m": Evaluates the VDA_GMSBMF model using 10-fold cross-validation on drug-disease datasets.
 
 
 ## How to Run
