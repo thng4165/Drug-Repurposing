@@ -4,9 +4,9 @@ myseed = 2024;
 rng(myseed);
     %% 1. Load Datasets%%%%%%%%%%%%%%%%%%%%%%%%
     % Load the dataset specified in the input
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Fdataset
-    % load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Cdataset
-    load C:\Trang\KIProjects\ComprehensionDR\Datasets\MatlabDataFiles\Ydataset
+    % load Datasets\MatlabDataFiles\Fdataset
+    % load Datasets\MatlabDataFiles\Cdataset
+    load Datasets\MatlabDataFiles\Ydataset
     
     % Extract matrices from loaded data
     Wrr = drug;
