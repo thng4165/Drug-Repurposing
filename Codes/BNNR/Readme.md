@@ -19,7 +19,7 @@ We have added two additional functions:
 * "TestBNNR_CV10folds.m":  Evaluates the BNNR model using 10-fold cross-validation.
 
 # How to Run
-Run "Demo.m" to test the BNNR algorithm on the sample dataset.
+* Run "Demo.m" to test the BNNR algorithm on the sample dataset.
 
-Run "TestBNNR_CV10folds.m" to reproduce the 10-fold cross-validation results reported in our paper.
+* Run "TestBNNR_CV10folds.m" to reproduce the 10-fold cross-validation results reported in our paper.
 
