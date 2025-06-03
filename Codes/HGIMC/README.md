@@ -1,6 +1,6 @@
 # HGIMC
 HGIMC also utilizes BNNR, but combines with the guilt-by association principle of HGBI. It refines drug and disease similarity
-matrices using Gaussian radial basis functions (GRB) before applying bounded matrix completion (BMC) with the optimization equation (Equation 10) of
+matrices using Gaussian radial basis functions (GRB) before applying bounded matrix completion (BMC) with the optimization equation of
 BNNR model to impute high confidence drug-disease associations. This step enriches the edges connecting drug and disease networks. Finally, it integrates the
 updated drug and disease similarity matrices with the updated drug-disease association matrix to predict the unknown associations.
 
