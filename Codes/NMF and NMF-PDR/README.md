@@ -11,9 +11,9 @@ We introduce NMF-PDR, a proposed permutation approach for NMF in DR. NMF-PDR ass
 
      - NMF_ELee(): Implements the NMF algorithm using Lee–Seung update rules.
 
-*sort_matrix(): Sorts or ranks the values in each column of a matrix.
+     - sort_matrix(): Sorts or ranks the values in each column of a matrix.
 
-*makeFolds() and convert_element(): Utility functions for preparing 10-fold cross-validation.
+     - makeFolds() and convert_element(): Utility functions for preparing 10-fold cross-validation.
 
 * ```TestNMF_CV10folds.R```: Evaluates the NMF model using 10-fold cross-validation to assess performance
 
