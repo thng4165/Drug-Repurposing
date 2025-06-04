@@ -38,6 +38,5 @@ Each method is provided in a separate folder. A README file is included in each 
 
 
 ### Citation
-
-
+[1] Li, Yinghong, Yinqi Yang, Zhuohao Tong, Yu Wang, Qin Mi, Mingze Bai, Guizhao Liang, Bo Li, and Kunxian Shu. "A comparative benchmarking and evaluation framework for heterogeneous network-based drug repositioning methods." Briefings in Bioinformatics 25, no. 3 (2024): bbae172.
 
