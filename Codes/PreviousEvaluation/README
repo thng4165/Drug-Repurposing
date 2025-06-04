@@ -1,4 +1,4 @@
-
+# Evaluation Stratery
 
 
 This evaluation strategy is performed in [...]. Li et al. do not perform CV on full data points, thereby avoiding the large number of negative instances during
