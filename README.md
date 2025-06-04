@@ -29,8 +29,15 @@ Each method is provided in a separate folder. A README file is included in each 
 
 ### Evaluation Results
 * The AUC and AUPR results from 25 runs for each model are provided in the Results/AUC_AUPR_25runs folder.
-  
+
+* The HGIMC-MultipleSimilarity folder contains the results from 25 runs of the HGIMC model on datasets that include multiple similarities (for both drugs and diseases).
+
+* The PreviousEvaluation folder includes results from 25 runs of the BNNR, OMC, and HGIMC models using the evaluation strategy described in [1].
+
 * R code for visualizing these results is also included.
+
+
+### Citation
 
 
 
