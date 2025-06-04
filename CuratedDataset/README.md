@@ -23,3 +23,5 @@ We follow a similar approach as performed for the oMat-MechDB dataset, but const
 
 # Citation
 [1] Zhou, XueZhong, Jörg Menche, Albert-László Barabási, and Amitabh Sharma. "Human symptoms–disease network." Nature communications 5, no. 1 (2014): 4212.
+
+[2] Gonzalez-Cavazos, Adriana Carolina, Anna Tanska, Michael Mayers, Denise Carvalho-Silva, Brindha Sridharan, Patrick A. Rewers, Umasri Sankarlal, Lakshmanan Jagannathan, and Andrew I. Su. "DrugMechDB: a curated database of drug mechanisms." Scientific Data 10, no. 1 (2023): 632.
