@@ -1,3 +1,5 @@
+# Note: Uploading datasets for the preparation.
+
 # Collection Databases
 * MechDB: Drug - disease associations which are used to construct the drug-disease association matrix. This is the recent largest curated database from the Drug Mechanism Database project to collect drug-disease associations.
 * DrugBank database: drugs and their structures which are used to calculate the drug similarity matrix
