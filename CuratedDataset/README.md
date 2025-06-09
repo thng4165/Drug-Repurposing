@@ -14,7 +14,7 @@ We collect the rare diseases and their symptom information from the Orphanet dat
 
 The drug-drug similarity matrix $M_{rr}$ is calculated based on the SMILES structure using the Taminoto method.
 
-Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the symptom-disease matrix ($M_{sd}$) using the Gaussian interaction profile (GIP) kernel approach.
+Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the symptom-disease matrix ($M_{sd}$) using the Gaussian interaction profile (GIP) kernel approach. 
 
 
 # HSDN-MechDB data
