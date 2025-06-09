@@ -44,8 +44,6 @@
 
 ## MatlabDataFiles folder
 
-### 
-
 ### oMat-MechDB data
 * ```rare_disease_interact.mat```: drug-disease association matrix
 * ```rare_disease_sim.mat```: disease-disease similarity matrix
@@ -55,6 +53,12 @@
 * ```hsdn_MechDB_dd_association_numeric.mat```: drug-disease association matrix
 * ```hsdn_MechDB_disease_sim_GIP.mat```: disease-disease similarity matrix
 * ```hsdn_MechDB_drug_sim.mat```: drug-drug similarity matrix
+
+### 
+Six datasets HDVD (```HDVD.mat```), LAGCN (```LAGCN.mat```), Fdata (```Fdataset.mat```), Cdata (```Cdataset.mat```), LRSSL (```LRSSL.mat```), Ydata (```Ydataset.mat```) include:
+* drug: drug-drug similarity matrix
+* disease: disease-disease similarity matrix
+* didr: drug-disease association matrix
 
 ## HGIMCdata
 Three datasets containing multiple similarity measures for drugs and diseases: 
