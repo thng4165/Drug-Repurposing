@@ -1,7 +1,12 @@
 # Description datasets
+* Each model uses the following three input matrices:
+    - Drug–disease Association Matrix
+    - Disease–disease Similarity Matrix
+    - Drug–drug Similarity Matrix
+      
+*The methods are implemented in both MATLAB and R. Accordingly, the input datasets are provided in both .mat (MATLAB) and .RData (R) formats.
 
 ## RDataFiles folder
-
 ### HDVD data
 * ```HDVDdata_asso.RData```: drug-disease association matrix
 * ```HDVDdata_disease_sim.RData```: disease-disease similarity matrix
