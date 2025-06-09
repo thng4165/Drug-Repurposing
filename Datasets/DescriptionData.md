@@ -43,5 +43,14 @@
 
 
 ## MatlabDataFiles folder
+### HSDN-MechDB data
+* ```hsdn_MechDB_dd_association_numeric.mat```: drug-disease association matrix
+* ```hsdn_MechDB_disease_sim_GIP.mat```: disease-disease similarity matrix
+* ```hsdn_MechDB_drug_sim.mat```: drug-drug similarity matrix
+
+### oMat-MechDB data
+* ```rare_disease_interact.mat```: drug-disease association matrix
+* ```rare_disease_sim.mat```: disease-disease similarity matrix
+* ```rare_drug_sim.mat```: drug-drug similarity matrix
 
 ## HGIMCdata
