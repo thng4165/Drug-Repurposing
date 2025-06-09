@@ -54,7 +54,7 @@
 * ```hsdn_MechDB_disease_sim_GIP.mat```: disease-disease similarity matrix
 * ```hsdn_MechDB_drug_sim.mat```: drug-drug similarity matrix
 
-### 
+### Six public datasets
 Six datasets HDVD (```HDVD.mat```), LAGCN (```LAGCN.mat```), Fdata (```Fdataset.mat```), Cdata (```Cdataset.mat```), LRSSL (```LRSSL.mat```), Ydata (```Ydataset.mat```) include:
 * drug: drug-drug similarity matrix
 * disease: disease-disease similarity matrix
