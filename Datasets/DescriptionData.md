@@ -4,7 +4,7 @@
     - Disease–disease Similarity Matrix
     - Drug–drug Similarity Matrix
       
-*The methods are implemented in both MATLAB and R. Accordingly, the input datasets are provided in both .mat (MATLAB) and .RData (R) formats.
+* The methods are implemented in both MATLAB and R. Accordingly, the input datasets are provided in both .mat (MATLAB) and .RData (R) formats.
 
 ## RDataFiles folder
 ### HDVD data
