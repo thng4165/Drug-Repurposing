@@ -43,7 +43,7 @@ interaction_matrix <- matrix(0, nrow = length(unique_diseases), ncol = length(un
 
 ## Populate the interaction matrix based on the presence or absence of HPO terms for each disease
 for (i in 1:length(unique_diseases)) {
-  i=1
+  # i=1
   disease <- unique_diseases[i]
   hpo_terms <- unique(disease_symptom_oMat[disease_symptom_oMat$mesh == disease, "HPOId"])
   col_indices <- match(hpo_terms, unique_hpo_terms)
