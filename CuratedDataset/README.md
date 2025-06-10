@@ -17,6 +17,7 @@ The drug-drug similarity matrix $M_{rr}$ is calculated based on the SMILES struc
 Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the symptom-disease matrix ($M_{sd}$) using the Gaussian interaction profile (GIP) kernel approach.
 
 * Data preparation: The script oMat_MechDB_processing.R prepares data, and constructs the oMat-MechDB dataset, including the following components:
+  
       - Drug–disease association matrix (```rare_disease_interact.RData```)
       - Drug–drug similarity matrix (```rare_drug_sim.RData```)
       - Disease–disease similarity matrix (```rare_disease_sim.RData```)
