@@ -2,13 +2,12 @@
 
 # Collection Databases
 
-Please find these databases from [https://drive.google.com/drive/folders/1ngBYPuepfTHPpbjvBpwHQ9G9-2NQJnb5?usp=sharing](https://drive.google.com/drive/folders/1Lo5Xg--8m2D-gbuzO9cDiaqxTfQa8Tlk?usp=sharing)
-
 * MechDB: Drug - disease associations which are used to construct the drug-disease association matrix. This is the recent largest curated database from the Drug Mechanism Database project to collect drug-disease associations.
 * DrugBank database: drugs and their structures which are used to calculate the drug similarity matrix
 * Orphanet database: disease - symptom associations of rare diseases which are used to construct the disease similarity matrix of oMat-MechDB data
 * Human Symptoms Disease Network (HSDN) database: disease - symptom associations of HSDN which are used to construct the disease similarity matrix of HSDN-MechDB
 
+Please find these databases from [https://drive.google.com/drive/folders/1ngBYPuepfTHPpbjvBpwHQ9G9-2NQJnb5?usp=sharing](https://drive.google.com/drive/folders/1Lo5Xg--8m2D-gbuzO9cDiaqxTfQa8Tlk?usp=sharing)
 
 # oMat-MechDB data
 
