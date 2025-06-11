@@ -17,7 +17,7 @@ oMat-MechDB focuses on rare diseases with the disease symptoms collected from Or
 The drug-drug similarity matrix $M_{rr}$ is calculated based on the SMILES structure using the Taminoto method.
 Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the symptom-disease matrix ($M_{sd}$) using the Gaussian interaction profile (GIP) kernel approach.
 
-* Data preparation: The script ```oMat_MechDB_processing.R``` prepares data, and constructs the oMat-MechDB dataset, including the following components:
+* Data preparation: The scripts ```Preparation_Database_oMat_MechDB.R``` and ```oMat_MechDB_processing.R``` prepare data, and construct the oMat-MechDB dataset, including the following components:
   - Drug–disease association matrix (```rare_disease_interact.RData```)  
   - Drug–drug similarity matrix (```rare_drug_sim.RData```)
   - Disease–disease similarity matrix (```rare_disease_sim.RData```)
@@ -28,7 +28,7 @@ Finally, we compute the disease-disease similarity matrix $M_{dd}$ based on the 
 
 We follow a similar approach as performed for the oMat-MechDB dataset, but construct a symptom-disease matrix ($M_{sd}$) using the Human Symptoms Disease Network (HSDN) database [1]. The HSDN-MechDB dataset comprises 616 diseases and 1270 drugs with 3,710 associations and 778,619 non-associations, resulting in a high sparsity of 99.52\%, 
 
-* Data preparation: The script ```Data_hsdn_MechDB.R``` prepares data, and constructs the hsdn-MechDB dataset, including the following components:
+* Data preparation: The script ```hsdn_processing.R``` and ```Data_hsdn_MechDB.R``` prepares data, and constructs the hsdn-MechDB dataset, including the following components:
   - Drug–disease association matrix (```hsdn_MechDB_dd_association.RData```)  
   - Drug–drug similarity matrix (```hsdn_MechDB_drug_sim.RData```)
   - Disease–disease similarity matrix (```hsdn_MechDB_disease_sim_GIP.RData```)
