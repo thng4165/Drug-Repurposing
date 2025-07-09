@@ -23,9 +23,10 @@ We calculate molecular similarities using various fingerprint (FP) types to cons
   The following files are produced:
 
 ### Optimal Features for Models
-Optimal feature is investigated for each case with 
+Optimal feature is investigated for each case as follow:
 * FPs_only: ```FPtype="ECFP4"```  
 * AAs_only: ```FPtype="AVALON"```  
 * Ligands_only: ```FPtype="ECFP6"```  
-* Peptides_only: ```FPtype = "AVALON"```  
+* Peptides_only: ```FPtype = "AVALON"```
+  
  The corresponding data preparation is implemented in ```prepareData_set2.R``` 
