@@ -10,20 +10,20 @@ This repository contains code and data preparation scripts for training and eval
 ### Calculation Similarity Matrix between Drugs and Ligands, Amino Acids, or Peptides
 We calculate molecular similarities using various fingerprint (FP) types to construct features for the model.
 
-* Ligands: Similarity matrix between 14 ligands and 9 FP types.\\
-  Rscript file: ```WDR91_similarity_drugs_ligands.R```\\
+* Ligands: Similarity matrix between 14 ligands and 9 FP types.  
+  Rscript file: ```WDR91_similarity_drugs_ligands.R```  
   The following files are produced: ```{simType}_sim_ligands_dist_{FP}.RData```
 
-* Amino Acids: Similarity matrix between 20 amino acids and 9 FP types.\\
-  Rscript file: ```WDR91_similarity_acids_fp.R```\\
+* Amino Acids: Similarity matrix between 20 amino acids and 9 FP types.  
+  Rscript file: ```WDR91_similarity_acids_fp.R```  
   The following files are produced: ```{simType}_sim_acids_{FP}.RData```
 
-* Peptides: Similarity matrix between 605 unique peptides and 9 FP types.\\
-  Code in Rscript file: ```prepareData_set2.R```\\
+* Peptides: Similarity matrix between 605 unique peptides and 9 FP types.  
+  Code in Rscript file: ```prepareData_set2.R```  
   The following files are produced:
 
-### Features for Models
-* FPs_only: ```FPtype="ECFP4"```
-* AAs_only: ```FPtype="AVALON"```
-* Ligands_only: ```FPtype="ECFP6"```
-* Peptides_only: ```FPtype = "AVALON"```
+### Optimal Features for Models
+* FPs_only: ```FPtype="ECFP4"```  
+* AAs_only: ```FPtype="AVALON"```  
+* Ligands_only: ```FPtype="ECFP6"```  
+* Peptides_only: ```FPtype = "AVALON"```  
