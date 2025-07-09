@@ -11,15 +11,15 @@ This repository contains code and data preparation scripts for training and eval
 ### Calculation Similarity Matrix between Drugs and Ligands, Amino Acids, or Peptides
 We calculate molecular similarities using various fingerprint (FP) types to construct features for the model, employing either the Tanimoto or cosine similarity methods (as specified by ```simType```).
 
-* Ligands: Similarity matrix between 14 ligands and 9 FP types.  
+* **Ligands**: Similarity matrix between 14 ligands and 9 FP types.  
   Rscript file: ```WDR91_similarity_drugs_ligands.R```  
   The following files are produced: ```{simType}_sim_ligands_dist_{FP}.RData```
 
-* Amino Acids: Similarity matrix between 20 amino acids and 9 FP types.  
+* **Amino Acids**: Similarity matrix between 20 amino acids and 9 FP types.  
   Rscript file: ```WDR91_similarity_acids_fp.R```  
   The following files are produced: ```{simType}_sim_acids_{FP}.RData```
 
-* Peptides: Similarity matrix between 605 unique peptides and 9 FP types.  
+* **Peptides**: Similarity matrix between 605 unique peptides and 9 FP types.  
   Code in Rscript file: ```prepareData_set2.R```  
  
 ### Optimal Features for Models
