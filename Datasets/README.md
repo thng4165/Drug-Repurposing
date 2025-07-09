@@ -1,4 +1,4 @@
-# lighGBM models for 
+# lighGBM Prediction Models 
 This repository contains code and data preparation scripts for training and evaluating lightGBM models to predict active compounds against the **WDR91** target, using various molecular fingerprints and similarity-based features.
 ## Data preparation
 ### Training/Test Data for Each Fingerprint (FP) type
