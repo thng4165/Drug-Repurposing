@@ -46,5 +46,5 @@ Optimal feature was investigated for each case of feature type as below:
 * Set the number of cross-validation folds using ```foldNum``` (we used foldNum = 10)
 * Cross-validation method: building block (BB) or standard random cross-validation by random
 * Parameter settings of lightGBM
-  We use ```learningrate = 0.1```, ```maxbin = 100```, ```numleaves = 75```, and ```forcecol_wise = TRUE```, otherwise, the default values are applied.
+  We use ```learningrate = 0.1```, ```maxbin = 100```, ```numleaves = 75```, and ```forcecol_wise = TRUE```, otherwise, the default values are applied
 * Run the prediction models with ```foldNum``` folds
