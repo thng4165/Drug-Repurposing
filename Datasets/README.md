@@ -33,7 +33,7 @@ Optimal feature was investigated for each case of feature type as below:
 
  ## Run lightGBM models
  ### Package
-  lightgbm package and R version 4.3.2 are used.
+  ```lightgbm``` package and **R version 4.3.2** are used.
  ### Run Instructions
  Rscript file: ```Target2035_lightGBM_predictionModels.R```
  
