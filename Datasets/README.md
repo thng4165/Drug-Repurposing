@@ -23,7 +23,7 @@ We calculate molecular similarities using various fingerprint (FP) types to cons
   The following files are produced:
 
 ### Optimal Features for Models
-Optimal feature is investigated for each case as follow:
+Optimal feature is investigated for each case as below:
 * FPs_only: ```FPtype="ECFP4"```  
 * AAs_only: ```FPtype="AVALON"```  
 * Ligands_only: ```FPtype="ECFP6"```  
