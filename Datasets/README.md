@@ -2,9 +2,9 @@
 This repository contains code and data preparation scripts for training and evaluating lightGBM models to predict active compounds against the **WDR91** target, using various molecular fingerprints and similarity-based features.
 ## Data preparation
 ### Training/Test Data for Each Fingerprint (FP) type
-* ```WDR91_TrainData_drug_FP.R```:  Generates training dataset for each FP type.\\
+* ```WDR91_TrainData_drug_FP.R```:  Generates training dataset for each FP type.  
   The following files are produced: ```acEmb_WDR91_{FP}.RData```
-* ```WDR91_Step1TestData_drug_FP.R```: Generates test dataset for each FP type.\\
+* ```WDR91_Step1TestData_drug_FP.R```: Generates test dataset for each FP type.  
   The following files are produced: ```Test_WDR91_{FP}.RData```
 
 ### Calculation Similarity Matrix between Drugs and Ligands, Amino Acids, or Peptides
