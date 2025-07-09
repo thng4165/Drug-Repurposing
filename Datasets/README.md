@@ -38,13 +38,13 @@ Optimal feature was investigated for each case of feature type as below:
  Rscript file: ```Target2035_lightGBM_predictionModels.R```
  
  Following these steps:
-* run source("../Target2035_functions.R"): helper functions
-* run source("prepareData_set2.R"): data preparation
+* run ```source("../Target2035_functions.R")```: helper functions
+* run ```source("prepareData_set2.R")```: data preparation
 * Set the similarity method ```simType``` from ```simTypeList``` (we used simType = "tanimoto")
 * Set the feature type ```fstype``` from ```featureSetting```
-* Set training proportion p_use = 0.95: divide data into a training set (95%) and a test set (5%)
-* Set the number of cross-validation folds using foldNum (we used foldNum = 10)
+* Set training proportion ```p_use = 0.95```: divide data into a training set (95%) and a test set (5%)
+* Set the number of cross-validation folds using ```foldNum``` (we used foldNum = 10)
 * Cross-validation method: building block (BB) or standard random cross-validation by random
 * Parameter settings of lightGBM
-  We use learningrate = 0.1, maxbin = 100, numleaves = 75, and forcecol_wise = TRUE, otherwise, the default values are applied.
+  We use ```learningrate = 0.1```, ```maxbin = 100```, ```numleaves = 75```, and ```forcecol_wise = TRUE```, otherwise, the default values are applied.
 * Run the prediction models with ```foldNum``` folds
