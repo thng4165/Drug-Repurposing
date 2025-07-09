@@ -31,7 +31,7 @@ Optimal feature was investigated for each case of feature type as below:
   
  The corresponding data preparation was implemented in ```prepareData_set2.R``` 
 
- ## Run lightGBM models
+ ## Run LightGBM models
  ### Package
   ```lightgbm``` package and **R version 4.3.2** are used.
  ### Run Instructions
