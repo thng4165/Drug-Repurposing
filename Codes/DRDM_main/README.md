@@ -1,4 +1,4 @@
-# Adaptive debiasing learning for drug repositioning
+# Deep learning framework with a debiasing mechanism (DRDM)
 This is the PyTorch implementation of DRDM for drug repositioning associated with:
 
 >**Adaptive debiasing learning for drug repositioning,**  
