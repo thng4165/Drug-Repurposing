@@ -11,10 +11,10 @@ This is the PyTorch implementation of DRDM for drug repositioning associated wit
 
 ## Usage
 **Original implementation:**  
-  Run main.py
+  * Run main.py
 
 **Adjusted implementation for our paper (Benchmarking Heterogeneous Network-Based Methods for Drug Repurposing):**
-  Run mainDR.py
+  * Run mainDR.py
 
 ### Reference
 	@article{meng2025adaptive,
