@@ -1,0 +1,30 @@
+## Dataset Description
+
+### `Ydataset_ms`
+This dataset includes the following components:
+
+- **Wrname**: DrugBank IDs of drugs  
+- **Wdname**: OMIM IDs of diseases  
+- **drug_ChemS**: Drug chemical structure similarity matrix  
+- **drug_AtcS**: Drug ATC code similarity matrix  
+- **drug_SideS**: Drug side-effect similarity matrix  
+- **drug_DDIS**: Drug–drug interaction similarity matrix  
+- **drug_TargetS**: Drug target profile similarity matrix  
+- **disease_PhS**: Disease phenotype similarity matrix  
+- **disease_DoS**: Disease ontology similarity matrix  
+- **didr**: Disease–drug association matrix  
+
+---
+
+### `Ydataset_mul`
+This dataset is derived from `Ydataset_ms` by aggregating similarities:
+
+- **Drug similarity**:  
+  \[
+  \text{drug} = \frac{\text{drug\_ChemS} + \text{drug\_AtcS} + \text{drug\_SideS} + \text{drug\_DDIS} + \text{drug\_TargetS}}{5}
+  \]
+
+- **Disease similarity**:  
+  \[
+  \text{disease} = \frac{\text{disease\_PhS} + \text{disease\_DoS}}{2}
+  \]
