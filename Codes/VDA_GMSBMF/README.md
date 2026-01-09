@@ -28,7 +28,8 @@ We have added two additional functions:
 
 
 
-# cite
+# References
 [1] Yang, et al. Computational drug repositioning based on multi-similarities bilinear matrix factorization. Briefings in Bioinformatics 22.4 (2021): bbaa267. <br> 
 Wang, et al. Drug repositioning for SARS-CoV-2 by Gaussian kernel similarity bilinear matrix factorization. <br>  
+
 
