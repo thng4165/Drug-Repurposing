@@ -1,5 +1,6 @@
 # Deep learning framework with a debiasing mechanism (DRDM)
-This is the PyTorch implementation of DRDM for drug repositioning associated to [2]
+This is the PyTorch implementation of DRDM for drug repositioning associated [2]
+
 The original code was downloaded from https://github.com/1yiw/DRDM
 
 ## Environment Requirement
