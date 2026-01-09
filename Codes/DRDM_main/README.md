@@ -17,11 +17,4 @@ This is the PyTorch implementation of DRDM for drug repositioning associated wit
   * Run mainDR.py
 
 ### Reference
-	@article{meng2025adaptive,
-          title={Adaptive debiasing learning for drug repositioning},
-          author={Meng, Yajie and Wang, Yi and Hu, Xinrong and Lu, Changcheng and Tang, Xianfang and Cui, Feifei and Zeng, Pan and Yao, Yuhua and Yang, Jialiang and Xu, Junlin},
-          journal={Journal of Biomedical Informatics},
-          pages={104843},
-          year={2025},
-          publisher={Elsevier}
-        }
+	MENG, Yajie, et al. Adaptive debiasing learning for drug repositioning. Journal of Biomedical Informatics, 2025, 104843.
