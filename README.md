@@ -1,7 +1,7 @@
 # Benchmarking heterogeneous network-based methods for drug repurposing
 
 ## Introduction
-In this study, we systematically evaluate ten advanced heterogeneous network-based DR
+In this study [1], we systematically evaluate ten advanced heterogeneous network-based DR
 methods across eight diverse datasets, including six publicly available datasets and two newly introduced
 drug-disease datasets. The methods are based on (i) matrix factorization: NMF, NMF-PDR, NMF-DR
 and VDA-GKSBMF; (ii) matrix completion: BNNR, OMC and HGIMC; (iii) recommendation system:
@@ -32,11 +32,13 @@ Each method is provided in a separate folder. A README file is included in each 
 
 * The HGIMC-MultipleSimilarity folder contains the results from 25 runs of the HGIMC model on datasets that include multiple similarities (for both drugs and diseases).
 
-* The PreviousEvaluation folder includes results from 25 runs of the BNNR, OMC, and HGIMC models using the evaluation strategy described in [1].
+* The PreviousEvaluation folder includes results from 25 runs of the BNNR, OMC, and HGIMC models using the evaluation strategy described in [2].
 
 * R code for visualizing these results is also included.
 
 
-### Citation
-[1] Li, Yinghong, Yinqi Yang, Zhuohao Tong, Yu Wang, Qin Mi, Mingze Bai, Guizhao Liang, Bo Li, and Kunxian Shu. "A comparative benchmarking and evaluation framework for heterogeneous network-based drug repositioning methods." Briefings in Bioinformatics 25, no. 3 (2024): bbae172.
+### References
+[1] Nguyen, T. T., Pawitan, Y., Calza, S., & Vu, T. N. (2025). Benchmarking heterogeneous network-based methods for drug repurposing. npj Systems Biology and Applications.
+[2] Li, Yinghong, Yinqi Yang, Zhuohao Tong, Yu Wang, Qin Mi, Mingze Bai, Guizhao Liang, Bo Li, and Kunxian Shu. "A comparative benchmarking and evaluation framework for heterogeneous network-based drug repositioning methods." Briefings in Bioinformatics 25, no. 3 (2024): bbae172.
+
 
