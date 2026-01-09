@@ -39,6 +39,7 @@ Each method is provided in a separate folder. A README file is included in each 
 
 ### References
 [1] Nguyen, T. T., Pawitan, Y., Calza, S., & Vu, T. N. (2025). Benchmarking heterogeneous network-based methods for drug repurposing. npj Systems Biology and Applications.
+
 [2] Li, Yinghong, Yinqi Yang, Zhuohao Tong, Yu Wang, Qin Mi, Mingze Bai, Guizhao Liang, Bo Li, and Kunxian Shu. "A comparative benchmarking and evaluation framework for heterogeneous network-based drug repositioning methods." Briefings in Bioinformatics 25, no. 3 (2024): bbae172.
 
 
